@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> CSS筛选器Cheat Sheet · 墨石 · 默而识之</title><meta name="description" content="CSS筛选器Cheat Sheet - Hao Jiang"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://neo42.github.io/atom.xml" title="墨石 · 默而识之"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">文章</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/projects/" target="_self" class="nav-list-link">项目</a></li><li class="nav-list-item"><a href="https://github.com/Neo42" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/Hao582307236" target="_blank" class="nav-list-link">TWITTER</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1>CSS筛选器Cheat Sheet</h1><div class="post-info">2019年8月16日</div><div class="post-content"><blockquote>
+<p>MDN 常用 CSS 筛选器的总结。</p>
+</blockquote>
+<a id="more"></a>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>例子</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>h1</code></td>
+<td>元素名称</td>
+</tr>
+<tr>
+<td><code>#root</code></td>
+<td><code>id</code></td>
+</tr>
+<tr>
+<td><code>.container</code></td>
+<td><code>class</code></td>
+</tr>
+<tr>
+<td><code>button .info-button</code></td>
+<td>带有 <code>class</code> 的元素</td>
+</tr>
+<tr>
+<td><code>#root button</code></td>
+<td><code>#root</code> 中的所有 <code>&lt;button&gt;</code></td>
+</tr>
+<tr>
+<td><code>div,span</code></td>
+<td>并列选择</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>所有元素</td>
+</tr>
+<tr>
+<td><code>p *</code></td>
+<td>所有 <code>&lt;p&gt;</code></td>
+</tr>
+<tr>
+<td><code>p+div</code></td>
+<td>紧跟在 <code>&lt;p&gt;</code> 后的 div</td>
+</tr>
+<tr>
+<td><code>.title~p</code></td>
+<td>.title 之后的所有同层级 <code>&lt;p&gt;</code></td>
+</tr>
+<tr>
+<td><code>a&gt;b</code></td>
+<td><code>&lt;a&gt;</code> 中的直接子元素 <code>&lt;b&gt;</code></td>
+</tr>
+<tr>
+<td><code>div p</code></td>
+<td>div 中的所有(直接或间接)<code>&lt;p&gt;</code></td>
+</tr>
+<tr>
+<td><code>a:active</code></td>
+<td>激活：Tab 键或鼠标左键交互时 包括但不限于<code>&lt;button&gt;&lt;a&gt;</code></td>
+</tr>
+<tr>
+<td><code>input:checked</code></td>
+<td>选项输入框被勾选时</td>
+</tr>
+<tr>
+<td><code>input:default</code></td>
+<td>表单默认值<code>&lt;button&gt;</code>、<code>&lt;input&gt;</code></td>
+</tr>
+<tr>
+<td><code>input:disabled</code></td>
+<td>被禁用时</td>
+</tr>
+<tr>
+<td><code>div:empty</code></td>
+<td>没有子元素时</td>
+</tr>
+<tr>
+<td><code>p:first-child</code></td>
+<td>所有 <code>&lt;p&gt;</code> 元素中身为其父元素的第一个子元素的元素 （而不是 p 中包含的第一个子元素）</td>
+</tr>
+<tr>
+<td><code>p:first-of-type</code></td>
+<td>同类元素中的第一个</td>
+</tr>
+<tr>
+<td><code>input:focus</code></td>
+<td>输入框被鼠标点中或者 tab 键</td>
+</tr>
+<tr>
+<td><code>input:invalid</code></td>
+<td>未通过验证的 <code>&lt;input&gt;</code> 或其他 <code>&lt;form&gt;</code> 元素</td>
+</tr>
+<tr>
+<td><code>tr:nth-child(odd)/(even)</code></td>
+<td>HTML 表格中的奇数/偶数行。</td>
+</tr>
+<tr>
+<td><code>p:only-child</code></td>
+<td><code>&lt;p&gt;</code> 中身为其父元素的唯一子元素的元素</td>
+</tr>
+<tr>
+<td><code>input:required</code></td>
+<td>带有 <code>required</code> 属性的表单元素</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></article></div></main><footer><div class="paginator"><a href="/2019/09/09/2019-9-5-tap-into-redux/" class="prev">上一篇</a><a href="/2019/08/07/2019-8-7-deploy-create-react-app/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'jhio';
+var disqus_identifier = '2019/08/16/2019-8-16-css-selector-cheat-sheet/';
+var disqus_title = 'CSS筛选器Cheat Sheet';
+var disqus_url = 'http://neo42.github.io/2019/08/16/2019-8-16-css-selector-cheat-sheet/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//jhio.disqus.com/count.js" async></script><div class="copyright"><p>© 2019 <a href="http://neo42.github.io">Hao Jiang</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-139942221-1",'auto');ga('send','pageview');</script></body></html>

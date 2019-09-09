@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 统计学基础简略梳理 · 墨石 · 默而识之</title><meta name="description" content="统计学基础简略梳理 - Hao Jiang"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://neo42.github.io/atom.xml" title="墨石 · 默而识之"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">文章</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/projects/" target="_self" class="nav-list-link">项目</a></li><li class="nav-list-item"><a href="https://github.com/Neo42" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/Hao582307236" target="_blank" class="nav-list-link">TWITTER</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1>统计学基础简略梳理</h1><div class="post-info">2019年5月12日</div><div class="post-content"><blockquote>
+<p><a href="https://www.khanacademy.org/math/ap-statistics" target="_blank" rel="noopener">Khan Academy AP®︎ Statistics</a>的听课笔记。佛系解释，日后再改。</p>
+</blockquote>
+<a id="more"></a>
+<p>假设要测量全国 N 人口身高，从中随机抽取 n 人</p>
+<h2 id="总体-Population"><a href="#总体-Population" class="headerlink" title="总体 Population"></a>总体 Population</h2><p>全国 N 人</p>
+<h2 id="样本-Sample"><a href="#样本-Sample" class="headerlink" title="样本 Sample"></a>样本 Sample</h2><script type="math/tex; mode=display">x_i</script><p>随机抽取的 n 人</p>
+<script type="math/tex; mode=display">x_1,x_2,...,x_{n}</script><h2 id="总体均值-Population-Mean"><a href="#总体均值-Population-Mean" class="headerlink" title="总体均值 Population Mean"></a>总体均值 Population Mean</h2><p>全国 N 人的平均身高</p>
+<script type="math/tex; mode=display">\mu=\dfrac{x_1+x_2+x_3+...+x_N}{N}=\dfrac{\sum_{i=1}^{N} x_i}{N}</script><h2 id="样本均值-Sample-Mean"><a href="#样本均值-Sample-Mean" class="headerlink" title="样本均值 Sample Mean"></a>样本均值 Sample Mean</h2><p>被抽取的 n 人的平均身高，n 人身高之和除以 n</p>
+<script type="math/tex; mode=display">\overline{x}=\dfrac{x_1+x_2+x_3+...+x_n}{n}=\dfrac{\sum_{i=1}^{n} x_i}{n}</script><h2 id="（总体）方差-Population-Variance"><a href="#（总体）方差-Population-Variance" class="headerlink" title="（总体）方差 (Population) Variance"></a>（总体）方差 (Population) Variance</h2><p>反映<a href="#总体-population">总体</a>中各个数据与<a href="#总体均值-population-mean-mu">总体均值</a>的距离和数据的集中趋势，是为了方便描述数据特征而构造的的人造结构</p>
+<script type="math/tex; mode=display">
+\sigma^2=\dfrac{(x_1-\mu)^2+(x_2-\mu)^2+(x_3-\mu)^2+...+(x_N-\mu)^2}{N}=\dfrac{\sum_{i=1}^{N}(x_i-\mu)^2}{N}</script><h2 id="推论统计学-Inferential-Statistics"><a href="#推论统计学-Inferential-Statistics" class="headerlink" title="推论统计学 Inferential Statistics"></a>推论统计学 Inferential Statistics</h2><p>根据对<a href="#样本-sample-x_i">样本</a>的描述推断<a href="#总体-population">总体</a>的情况</p>
+<h2 id="样本方差-Sample-Variance"><a href="#样本方差-Sample-Variance" class="headerlink" title="样本方差 Sample Variance"></a>样本方差 Sample Variance</h2><p>与<a href="#总体方差-population-variance-sigma2">总体方差</a>同理，通常会小于总体方差</p>
+<script type="math/tex; mode=display">
+S^2=\dfrac{(x_1-\overline{x})^2+(x_2-\overline{x})^2+(x_3-\overline{x})^2+...+(x_n-\overline{x})^2}{n}=\dfrac{\sum_{i=1}^{n}(x_i-\overline{x})^2}{n}</script><h2 id="总体方差的无偏估计-Unbiased-Estimate-of-The-Variance"><a href="#总体方差的无偏估计-Unbiased-Estimate-of-The-Variance" class="headerlink" title="总体方差的无偏估计 Unbiased Estimate of The Variance"></a>总体方差的无偏估计 Unbiased Estimate of The Variance</h2><p>一种更接近<a href="#总体方差-population-variance-sigma2">总体方差</a>的样本方差对总体方差的估计值</p>
+<script type="math/tex; mode=display">
+S^2 =S_{n-1}^2=\dfrac{(x_1-\overline{x})^2+(x_2-\overline{x})^2+(x_3-\overline{x})^2+...+(x_n-\overline{x})^2}{n-1}=\dfrac{\sum_{i=1}^{n}(x_i-\overline{x})^2}{n-1}</script><h2 id="标准差-Standard-Deviation-sigma"><a href="#标准差-Standard-Deviation-sigma" class="headerlink" title="标准差 Standard Deviation $\sigma$"></a>标准差 Standard Deviation $\sigma$</h2><p><a href="#总体方差-population-variance-sigma2">方差</a>的平方根</p>
+<script type="math/tex; mode=display">
+\sigma=\sqrt{\sigma^2}=\sqrt{\dfrac{\sum_{i=1}^{N}(x_i-\mu)^2}{N}}</script><h2 id="方差-sigma-2-公式的简化"><a href="#方差-sigma-2-公式的简化" class="headerlink" title="方差$\sigma^2$公式的简化"></a>方差$\sigma^2$公式的简化</h2><script type="math/tex; mode=display">
+\begin{align}
+\sigma^2 &= \dfrac{\sum_{i=1}^{N}(x_i-\mu)^2}{N}\\
+&= \dfrac{\sum_{i=1}^{N}(x_i^2-2x_i\mu+\mu^2)}{N}\\
+&= \dfrac{\sum_{i=1}^{N}x_i^2}{N}-2*\dfrac{\sum_{i=1}^{N}x_i}{N}*\mu+\dfrac{\sum_{i=1}^{N}\mu^2}{N}\\
+&= \dfrac{\sum_{i=1}^{N}x_i^2}{N}-2\mu^2+\mu^2\\
+&= \dfrac{\sum_{i=1}^{N}x_i^2}{N}-\mu^2\\
+&= \dfrac{\sum_{i=1}^{N}x_i^2}{N}-\dfrac{(\sum_{i=1}^{N}x_i)^2}{N^2}\\
+\end{align}</script><h2 id="随机过程-Random-Process"><a href="#随机过程-Random-Process" class="headerlink" title="随机过程 Random Process"></a>随机过程 Random Process</h2><p>简单理解：会发生一组随机事件的过程，例如抛硬币或者掷骰子</p>
+<h2 id="输出值-Output"><a href="#输出值-Output" class="headerlink" title="输出值 Output"></a>输出值 Output</h2><p><a href="#随机过程-random-process">随机过程</a>中随机事件发生的结果，<a href="#随机变量-random-variable-x">随机变量</a>的取值</p>
+<h2 id="随机变量-Random-Variable-X"><a href="#随机变量-Random-Variable-X" class="headerlink" title="随机变量 Random Variable $X$"></a>随机变量 Random Variable $X$</h2><p><a href="#随机过程-random-process">随机过程</a>中的随机事件结果集合，是用来量化随机过程的<strong>函数</strong>，从随机过程映射到数值</p>
+<p>例如明天是否下雨</p>
+<script type="math/tex; mode=display">
+ X=\begin{cases}
+  0, & \text{if it doesn't rain tomorrow}, \\
+  1, & \text{otherwise}.
+\end{cases}</script><p>或抛硬币哪面朝上</p>
+<script type="math/tex; mode=display">
+X=\begin{cases}
+  0,&\text{if heads,}
+  \\
+  1,&\text{if tails.}
+\end{cases}</script><h2 id="离散型随机变量-Discrete-Random-Variable"><a href="#离散型随机变量-Discrete-Random-Variable" class="headerlink" title="离散型随机变量 Discrete Random Variable"></a>离散型随机变量 Discrete Random Variable</h2><p>数值个数有限、可以枚举、数值大小不连续</p>
+<h2 id="连续型随机变量-Continuous-Random-Variable"><a href="#连续型随机变量-Continuous-Random-Variable" class="headerlink" title="连续型随机变量 Continuous Random Variable"></a>连续型随机变量 Continuous Random Variable</h2><p>无穷个数值、枚举无法覆盖全部情况、数值大小连续</p>
+<h2 id="概率密度函数-Probability-Density-Function-f-x"><a href="#概率密度函数-Probability-Density-Function-f-x" class="headerlink" title="概率密度函数 Probability Density Function $f(x)$"></a>概率密度函数 Probability Density Function $f(x)$</h2><p>在数学中，<a href="#连续型随机变量-continuous-random-variable">连续型随机变量</a>的<a href="#概率密度函数-probability-density-function-fx">概率密度函数</a>是一个描述这个随机变量的输出值在某个确定的取值点附近的可能性的函数（不是概率大小，区别于<a href="#概率质量函数-probability-mass-function">概率质量函数</a>）。密度函数上单独的某一点表现的是概率质量函数在某一点的变化率。</p>
+<p>图形示例</p>
+<p><img src="/../density.png" alt="Image">{:.shadow}</p>
+<p>构成过程：参考<a href="https://www.youtube.com/watch?v=flNS7ubhgTU" target="_blank" rel="noopener">YouTube</a></p>
+<p><strong>概率大小和概率密度的关系</strong></p>
+<ul>
+<li>给定一个区间，则这个区间上概率密度函数的积分就是随机变量 X 落在这个区间内的概率</li>
+</ul>
+<script type="math/tex; mode=display">
+P(a \leq X \leq b)=\int_a^bf(X)d_x\\</script><ul>
+<li>某点的 概率密度函数 即为 概率在该点的变化率(或导数).</li>
+<li><a href="#随机过程-random-process">随机过程</a>中所有事件发生的概率之和（概率密度函数曲线下方的面积）为 1</li>
+</ul>
+<script type="math/tex; mode=display">
+\int_{-\infty}^\infty f(x)d_x=1</script><p>参考：<a href="https://www.zhihu.com/question/23237834" target="_blank" rel="noopener">知乎</a></p>
+<h2 id="概率质量函数-Probability-Mass-Function"><a href="#概率质量函数-Probability-Mass-Function" class="headerlink" title="概率质量函数 Probability Mass Function"></a>概率质量函数 Probability Mass Function</h2><p><a href="#离散型随机变量-discrete-random-variable">离散随机变量</a>在各特定取值上的概率</p>
+<p>概率质量函数和<a href="#概率密度函数-probability-density-function-fx">概率密度函数</a>不同之处在于：概率质量函数是对<a href="#离散型随机变量-discrete-random-variable">离散随机变量</a>定义的，本身代表该值的概率</p>
+<h2 id="累积分布函数-Cumulative-Distribution-Function"><a href="#累积分布函数-Cumulative-Distribution-Function" class="headerlink" title="累积分布函数 Cumulative Distribution Function"></a>累积分布函数 Cumulative Distribution Function</h2><p>也叫概率分布函数、分布函数。是<a href="#概率密度函数-probability-density-function-fx">概率密度函数</a>的积分，概率函数取值的集合结果，表示离散变量中所有小于等于 a 的<a href="#输出值-output">输出值</a>出现概率的和</p>
+<script type="math/tex; mode=display">
+{F_{X}(x)=\operatorname {P} (X\leq x)}</script><h2 id="期望值-Expected-Value-E-X"><a href="#期望值-Expected-Value-E-X" class="headerlink" title="期望值 Expected Value $E(X)$"></a>期望值 Expected Value $E(X)$</h2><p>总体均值、数学期望、或均值，亦简称期望</p>
+<p><a href="#离散型随机变量-discrete-random-variable">离散性随机变量</a>的期望值是试验中每次可能的结果乘以其结果概率的总和</p>
+<p>如果$X$是<a href="#离散型随机变量-discrete-random-variable">离散型随机变量</a>，输出值为 $x<em>{1},x</em>{2},\ldots$，和输出值相应的概率为 $p<em>{1},p</em>{2},\ldots$（概率和为 1）。</p>
+<script type="math/tex; mode=display">
+{E} (X)=\sum _{i}p_{i}x_{i}</script><p>参考：<a href="https://zh.wikipedia.org/wiki/%E6%9C%9F%E6%9C%9B%E5%80%BC" target="_blank" rel="noopener">维基百科</a></p>
+<h2 id="伯努利试验"><a href="#伯努利试验" class="headerlink" title="伯努利试验"></a>伯努利试验</h2><p>单次成功/失败试验又称为伯努利试验</p>
+<h2 id="二项分布-Binomial-Distribution"><a href="#二项分布-Binomial-Distribution" class="headerlink" title="二项分布 Binomial Distribution"></a>二项分布 Binomial Distribution</h2><p>n 个独立的是/非试验中成功的次数的离散概率分布</p>
+<h3 id="二项分布的概率"><a href="#二项分布的概率" class="headerlink" title="二项分布的概率"></a>二项分布的概率</h3><p>设进行 n 次<a href="#伯努利试验">伯努利试验</a>，结果为是的概率 P(是)=p，结果为非的概率 P(非)=1-p，结果为是次数为 k</p>
+<p>结果为是次数为 k 的概率为</p>
+<script type="math/tex; mode=display">
+  P(X=k)=
+  \Big(
+    \begin{split}
+    n \\
+    k
+    \end{split}
+  \Big)p^k(1-p)^{n-k};\Big(
+    \begin{split}
+    n \\
+    k
+    \end{split}
+  \Big)=\dfrac{N!}{k!(N-k)!}</script><p>n=1 时的二项分布称为伯努利分布</p>
+<h3 id="二项分布的期望"><a href="#二项分布的期望" class="headerlink" title="二项分布的期望"></a>二项分布的期望</h3><p>设进行 n 次伯努利试验，结果为是的概率 P(是)=p，结果为否的概率 P(非)=1-p，结果为是次数为 k，$a = k-1,b = n-1,n-k = b-a$。总体<a href="#期望值-expected-value-ex">期望值</a>为</p>
+<script type="math/tex; mode=display">
+\begin{align}
+
+E(X) &= \sum_{k=0}^nk\Big(
+     \begin{split}
+     n \\
+     k
+     \end{split}
+    \Big)p^k(1-p)^{n-k};\\
+    &= 0 + 1\Big(
+      \begin{split}
+        n\\
+        1
+      \end{split}
+      \Big)p^1(1-p)^{n-1} + ... +n\Big(
+      \begin{split}
+        n\\
+        n
+      \end{split}
+      \Big)p^n(1-p)^{n-n}\\
+    &= \sum_{k=1}^nk\Big(
+      \begin{split}
+        n\\
+        k
+      \end{split}
+      \Big)p^k(1-p)^{n-k}\\
+    &= \sum_{k=1}^nk\dfrac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\\
+    &= \sum_{k=1}^nk\dfrac{n!}{k(k-1)!(n-k)!}p^k(1-p)^{n-k}\\
+    &= \sum_{k=1}^n\dfrac{n!}{(k-1)!(n-k)!}p^k(1-p)^{n-k}\\
+    &= \sum_{k=1}^n\dfrac{n(n-1)!}{(k-1)!(n-k)!}p*p^{k-1}(1-p)^{n-k}\\
+    &= np\sum_{k=1}^n\dfrac{(n-1)!}{(k-1)!(n-k)!}p^{k-1}(1-p)^{n-k}\\
+    &= np\sum_{a=0}^b\dfrac{b!}{a!(b-a)!}p^a(1-p)^{b-a}\\
+    &= np\sum_{a=0}^b\dfrac{b!}{a!(b-a)!}p^a(1-p)^{b-a}\\
+    &= np\sum_{a=0}^b\Big(
+      \begin{split}
+        b\\
+        a
+      \end{split}
+      \Big)p^a(1-p)^{b-a}\\
+    &= np
+    \end{align}</script><p>参考：<a href="https://zh.wikipedia.org/wiki/%E4%BA%8C%E9%A0%85%E5%88%86%E4%BD%88" target="_blank" rel="noopener">维基百科</a></p>
+<h2 id="泊松分布-Poisson-Distribution"><a href="#泊松分布-Poisson-Distribution" class="headerlink" title="泊松分布 Poisson Distribution"></a>泊松分布 Poisson Distribution</h2><p>一种离散分布，二项分布的极限</p>
+<p>适合描述单位时间内随机事件发生的次数的概率分布。例：一段时间内一个路口的车流量、餐馆的就餐人数、汽车站台的候客人数、机器出现的故障数。</p>
+<h3 id="泊松分布的概率质量函数"><a href="#泊松分布的概率质量函数" class="headerlink" title="泊松分布的概率质量函数"></a>泊松分布的概率质量函数</h3><p>$\lambda={某一随机事件在一段时间内发生的平均次数 \over 这段时间的长度}$ ，或者理解为期望值</p>
+<script type="math/tex; mode=display">
+P(X=k)=\frac{e^{-\lambda}\lambda^k}{k!}</script><h4 id="推导-二项分布角度"><a href="#推导-二项分布角度" class="headerlink" title="推导(二项分布角度)"></a>推导(二项分布角度)</h4><script type="math/tex; mode=display">
+e=\lim_{n\to\infty}\left(1+{1 \over n}\right)^n\\</script><p>设${1 \over n}={a \over x},x=na,E(X) = \lambda = np$</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\lim_{n\to\infty}\left(1+{1 \over n}\right)^{na}
+&= \lim_{n\to\infty}\left(\left(1+{1 \over n}\right)^n\right)^a\\
+&= \lim_{n\to\infty}\left(\left(1+{1 \over n}\right)^n\right)^a\\
+&= \left(\lim_{n\to\infty}\left(1+{1 \over n}\right)^n\right)^a\\
+&= e^a\\
+\end{align}</script><p>当 n 趋于无穷时</p>
+<script type="math/tex; mode=display">
+\begin{align}
+  \lim_{n\to\infty} P(X=k)&=\lim_{n\to\infty}{n \choose k} p^k (1-p)^{n-k} \\
+ &=\lim_{n\to\infty}{n! \over (n-k)!k!} \left({\lambda \over n}\right)^k \left(1-{\lambda\over n}\right)^{n-k}\\
+ &=\lim_{n\to\infty}
+{\left[\frac{n!}{n^k\left(n-k\right)!}\right]}
+\left(\frac{\lambda^k}{k!}\right)
+{\left(1-\frac{\lambda}{n}\right)^n}
+{\left(1-\frac{\lambda}{n}\right)^{-k}}\\
+ &=\lim_{n\to\infty}
+\underbrace{\left[\frac{n(n-1)(n-2)...(n-k+1)}{n^k}\right]}_{\to 1}
+\left(\frac{\lambda^k}{k!}\right)
+\underbrace{\left(1-\frac{\lambda}{n}\right)^n}_{\to e^{-\lambda}}
+\underbrace{\left(1-\frac{\lambda}{n}\right)^{-k}}_{\to 1}\\
+&= \left(\frac{\lambda^k}{k!}\right)e^{-\lambda}\\
+\end{align}</script><h2 id="大数定律-Law-of-Larger-Numbers"><a href="#大数定律-Law-of-Larger-Numbers" class="headerlink" title="大数定律 Law of Larger Numbers"></a>大数定律 Law of Larger Numbers</h2><p>在重复试验中，随着试验次数的增加，事件发生的频率趋于一个稳定值。样本数量越多，则其算术平均值就有越高的概率接近期望值。</p>
+<h2 id="正态分布-Normal-Distribution"><a href="#正态分布-Normal-Distribution" class="headerlink" title="正态分布 Normal Distribution"></a>正态分布 Normal Distribution</h2><p>一种离散型分布，泊松分布的极限</p>
+<p>若随机变量服从一个数学期望为$μ$、方差为$σ^2$的正态分布，记为$X∼N(μ，σ2)$。其概率密度函数为</p>
+<script type="math/tex; mode=display">
+f(x)=\frac{1}{\sqrt{2\pi}\cdot\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}</script><ul>
+<li>$\mu=0,\sigma=1$的正态分布是标准正态分布</li>
+<li>使用正态分布近似代替二项分布时，必须进行连续性修正</li>
+</ul>
+<h2 id="Z-分数-Z-Score"><a href="#Z-分数-Z-Score" class="headerlink" title="Z 分数 Z-Score"></a>Z 分数 Z-Score</h2><p>表示给定值与平均值间距离多少个标准差</p>
+<h2 id="经验法则-Empirical-Rule"><a href="#经验法则-Empirical-Rule" class="headerlink" title="经验法则 Empirical Rule"></a>经验法则 Empirical Rule</h2><p>又叫 3-sigma 法则或者 68-95-99.7 法则，用于对已知平均数和标准差的正态分布数据进行快速推算</p>
+<p>在正态分布中，几乎所有数据都将落在均值的三倍标准差内。所述经验规则表明，68%的数据将分布在的第一个标准偏差之内，95%将落在第二个标准差之内，和 99.7%将落在均值的前三个标准偏差之内。</p>
+<p>参考：<a href="https://baike.baidu.com/item/%E7%BB%8F%E9%AA%8C%E6%B3%95%E5%88%99%EF%BC%88%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%8E%9F%E7%90%86%EF%BC%89" target="_blank" rel="noopener">百度百科</a></p>
+<h2 id="样本均值的抽样分布-Sampling-Distribution-of-the-Sample-Mean"><a href="#样本均值的抽样分布-Sampling-Distribution-of-the-Sample-Mean" class="headerlink" title="样本均值的抽样分布 Sampling Distribution of the Sample Mean"></a>样本均值的抽样分布 Sampling Distribution of the Sample Mean</h2><p>从原本的总体中取多个样本，对所有样本的样本均值进行抽样构成的频率分布。这个分布的均值与原总体均值相同。</p>
+<h2 id="中心极限定理-The-Central-Limit-Theorem"><a href="#中心极限定理-The-Central-Limit-Theorem" class="headerlink" title="中心极限定理 The Central Limit Theorem"></a>中心极限定理 The Central Limit Theorem</h2><p>在适当的条件下，随机变量中的大量样本均值近似服从正态分布</p>
+<h2 id="置信区间-Confidence-Intervals"><a href="#置信区间-Confidence-Intervals" class="headerlink" title="置信区间 Confidence Intervals"></a>置信区间 Confidence Intervals</h2><p>随机变量的样本均值分布中最常见的 95%的样本均值的范围</p>
+<h2 id="偏度-Skew"><a href="#偏度-Skew" class="headerlink" title="偏度 Skew"></a>偏度 Skew</h2><p>正态分布的偏度为零，偏度为正的意味着右侧尾部较长（峰值偏小），为负意味着左侧尾部较长（峰值偏大）。</p>
+<h2 id="峰度-Kurtosis"><a href="#峰度-Kurtosis" class="headerlink" title="峰度 Kurtosis"></a>峰度 Kurtosis</h2><p>峰度为正，峰值较尖，峰度为负，峰值较钝</p>
+<p>样本容量越大，峰度和偏度越小，更接近正态分布，分布距离均值越近。</p>
+<script type="math/tex; mode=display">lim_{1\to+\infty}P(|\frac{1}{n}\sum_i^nX_i-\mu|<\epsilon)=1, i=1,...,n</script></div></article></div></main><footer><div class="paginator"><a href="/2019/06/20/secret/" class="prev">上一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'jhio';
+var disqus_identifier = '2019/05/12/2019-5-12-statistics-1/';
+var disqus_title = '统计学基础简略梳理';
+var disqus_url = 'http://neo42.github.io/2019/05/12/2019-5-12-statistics-1/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//jhio.disqus.com/count.js" async></script><div class="copyright"><p>© 2019 <a href="http://neo42.github.io">Hao Jiang</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-139942221-1",'auto');ga('send','pageview');</script></body></html>
