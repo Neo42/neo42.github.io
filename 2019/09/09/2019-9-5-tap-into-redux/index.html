@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 尝试理解Redux · 墨石 · 默而识之</title><meta name="description" content="尝试理解Redux - Hao Jiang"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://neo42.github.io/atom.xml" title="墨石 · 默而识之"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">文章</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/projects/" target="_self" class="nav-list-link">项目</a></li><li class="nav-list-item"><a href="https://github.com/Neo42" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/Hao582307236" target="_blank" class="nav-list-link">TWITTER</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1>尝试理解Redux</h1><div class="post-info">2019年9月9日</div><div class="post-content"><blockquote>
-<p>在学习 Redux 之前，我们有必要明白 Redux 是什么、有什么用。</p>
+<p>最近在 Redux，光听别人讲总觉得半懂不懂，也很难记住，干脆自己试着写篇东西梳理一下。<br>但在学习 Redux 之前，我们有必要明白 Redux 是什么、有什么用。</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="What-the-hell-is-Redux"><a href="#What-the-hell-is-Redux" class="headerlink" title="What the hell is Redux?"></a>What the hell is Redux?</h3><p>想要准确地把握 Redux 的含义和它存在的意义，我们最好还是从它的官方文档入手。因为只有作画的人才能完整明白他画的东西究竟代表了什么。所以我们来看 Redux 官方网站首页的第一句话。</p>
+<h3 id="What-the-hell-is-Redux"><a href="#What-the-hell-is-Redux" class="headerlink" title="What the hell is Redux?"></a>What the hell is Redux?</h3><p>想要准确地把握 Redux 的含义和它的作用，我们最好还是从它的官方文档入手。这就好比所有人都可以欣赏一幅画，但这之中只有作画的人才能完整明白他画的东西究竟代表了什么。所以我们来看 Redux 官方网站首页的第一句话。</p>
 <blockquote>
 <p>Redux 是一个 JavaScript 应用的可预测的状态容器。</p>
 </blockquote>
@@ -22,9 +22,9 @@
 <p>先来看几句话。</p>
 <blockquote>
 <p>一句话概括，props 是组件对外的接口，state 是组件对内的接口。—— 徐超<a href="https://book.douban.com/subject/30210697/" target="_blank" rel="noopener">《React 进阶之路》</a></p>
-<p>React 组件中的 props 是其父组件传入的变量。而 state 也是变量，不过是直接在组件内初始化而且受组件自身管理。—— <a href="https://twitter.com/flaviocopes" target="_blank" rel="noopener">弗拉维奥·寇普斯</a></p>
-<p>“props”(property 的简写)是一个外界任意输入的对象，被 React 函数组件作为第一个参数接收。<br>“state”是随着某一 React 组件的生命周期变化的数据。——<a href="https://twitter.com/kentcdodds" target="_blank" rel="noopener">肯特·C·道兹</a></p>
-<p>用 state 储存你当前的页面在控制器-视图中所需的数据；用 props 把数据和事件监听器向下传入你的子组件。—— <a href="https://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react/32186324#32186324" target="_blank" rel="noopener">BentOnCoding</a></p>
+<p>React 组件中的 props 是其父组件传入的变量。而 state 也是变量，不过是直接在组件内初始化而且受组件自身管理。—— <a href="https://twitter.com/flaviocopes" target="_blank" rel="noopener">Flavio Copes</a>（Web 传道者）</p>
+<p>“props”(property 的简写)是一个外界任意输入的对象，被 React 函数组件作为第一个参数接收。“state”是随着某一 React 组件的生命周期变化的数据。——<a href="https://twitter.com/kentcdodds" target="_blank" rel="noopener">Kent C Dodds</a> (<a href="https://frontendmasters.com/teachers/kentcdodds/" target="_blank" rel="noopener">FrontendMaster</a>、<a href="https://egghead.io/instructors/kentcdodds" target="_blank" rel="noopener">Egghead.io</a>课程作者)</p>
+<p>用 state 储存你当前的页面在控制器-视图中所需的数据；用 props 把数据和事件监听器向下传入你的子组件。—— <a href="https://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react/32186324#32186324" target="_blank" rel="noopener">StackOverflow</a></p>
 </blockquote>
 <p>可见，Props 通常与父子组件的沟通有关，而 state 与组件自身有关。</p>
 <p>React 官方文档中当然也有介绍 props 和 state，在讲解这两个概念时，文档并没有单独去分别解释 props 和 state 是什么意思，而是各自搭配了一个概念。props 搭配 component，state 则搭配 lifecycle。这样，两者的关系就清楚了。</p>
@@ -43,9 +43,10 @@
 </ul>
 <p>理解了 state 和 props 的各自的含义和区别，我们自然可以问出这个问题。</p>
 <blockquote>
-<p><strong>什么样的组件应该使用状态呢？</strong> &gt; <strong>包含负责响应用户输入、服务器请求逻辑的组件。</strong>其实应用中的大部分组件只需要接收、渲染数据就可以了，所以很多开发者都倾向于把这部分组件写成无状态的函数组件，而把状态用于内部包含逻辑的少数几个组件里，这样也可以简化代码的理解难度。状态里储存的数据应该是随着用户交互、服务器请求等事件变化从而引发 UI 变更的数据。</p>
+<p><strong>什么样的组件应该使用状态呢？</strong></p>
+<p><strong>包含负责响应用户输入、服务器请求逻辑的组件。</strong>其实应用中的大部分组件只需要接收、渲染数据就可以了，所以很多开发者都倾向于把这部分组件写成无状态的函数组件，而把状态用于内部包含逻辑的少数几个组件里，这样也可以简化代码的理解难度。状态里储存的数据应该是随着用户交互、服务器请求等事件变化从而引发 UI 变更的数据。</p>
 </blockquote>
-<p><strong>状态管理为什么会成为问题？</strong></p>
+<p>再接下来，<strong>状态管理为什么会成为问题？</strong></p>
 <p>要回答这个问题我们还是应该从状态变化的原因上来找答案。</p>
 <p>在现在前端工程中，一个应用，尤其是一个单页应用的状态很容易就变得非常复杂。在这些状态数据中，有些会通过 Ajax 或者 Websocket 到达前端，一旦<strong>数据源一增加</strong>，状态管理的难度就会增加。而很多状态跟后端服务器并没有关系。很多状态通常都会在各个组件中<strong>共享、传递</strong>，有时一个状态会由父组件向下传递几层到子组件。这种情况下，数据随着时间变化，但变化的时间和原因会因为异步等原因变得越来越难把握。另一个问题是状态在组件之间的多层渗透会导致<strong>渲染成本增加、效率下降</strong>，从而影响用户体验。这些问题是真正的痛点。</p>
 <p><img src="https://ae01.alicdn.com/kf/H8f802aef84a44c5a9809d1fa160cf8f8f.jpg" alt="model-compo"></p>

@@ -192,11 +192,11 @@ body {
 body {
   margin: 0;
   color: #34495e;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1.6;
   background-color: #fff;
-  font-family: 'Source Han Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Noto Serif SC', serif;
 }
 ul.nav,
 ul.post-list {
@@ -270,8 +270,8 @@ header .nav-list-item {
   padding: 19px 10px;
 }
 header .nav-list-item a {
-  font-weight: 200px;
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 21px;
   line-height: 1.4;
 }
 .home.post-list {
@@ -745,6 +745,20 @@ footer .copyright a:hover {
   font-style: lighter;
 }
 p {
+  margin-left: 0;
+  margin-right: 0;
   margin-top: 0;
-  margin-bottom: 2rem;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.55rem;
+}
+h4 {
+  margin-block-start: 0;
+  margin-block-end: 2rem;
+}
+
+li {
+  margin-bottom: calc(1.55rem / 2);
 }
