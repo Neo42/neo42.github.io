@@ -1,5 +1,5 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 统计学基础简略梳理 · 墨石</title><meta name="description" content="统计学基础简略梳理 - Hao Jiang"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://neo42.github.io/atom.xml" title="墨石"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">文章</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/projects/" target="_self" class="nav-list-link">项目</a></li><li class="nav-list-item"><a href="https://github.com/Neo42" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/Hao582307236" target="_blank" class="nav-list-link">TWITTER</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1>统计学基础简略梳理</h1><div class="post-info">2019年5月12日</div><div class="post-content"><blockquote>
-<p><a href="https://www.khanacademy.org/math/ap-statistics" target="_blank" rel="noopener">Khan Academy AP®︎ Statistics</a>的听课笔记。佛系解释，日后再改。</p>
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 统计学基础简略梳理 · 墨石</title><meta name="description" content="统计学基础简略梳理 - 墨石"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.geekzu.org/css?family=Noto+Sans+SC|Noto+Serif+SC&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code&amp;display=swap"><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script><link rel="search" type="application/opensearchdescription+xml" href="http://neo42.github.io/atom.xml" title="墨石"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">文章</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/projects/" target="_self" class="nav-list-link">项目</a></li><li class="nav-list-item"><a href="https://github.com/Neo42" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/Hao582307236" target="_blank" class="nav-list-link">TWITTER</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1>统计学基础简略梳理</h1><div class="post-info">2019年5月12日</div><div class="post-content"><blockquote>
+<p><a href="https://www.khanacademy.org/math/ap-statistics" target="_blank" rel="noopener">Khan Academy AP®︎ Statistics</a> 的听课笔记。佛系解释，日后再改。</p>
 </blockquote>
 <a id="more"></a>
 <p>假设要测量全国 N 人口身高，从中随机抽取 n 人</p>
@@ -170,12 +170,16 @@ f(x)=\frac{1}{\sqrt{2\pi}\cdot\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\r
 <h2 id="偏度-Skew"><a href="#偏度-Skew" class="headerlink" title="偏度 Skew"></a>偏度 Skew</h2><p>正态分布的偏度为零，偏度为正的意味着右侧尾部较长（峰值偏小），为负意味着左侧尾部较长（峰值偏大）。</p>
 <h2 id="峰度-Kurtosis"><a href="#峰度-Kurtosis" class="headerlink" title="峰度 Kurtosis"></a>峰度 Kurtosis</h2><p>峰度为正，峰值较尖，峰度为负，峰值较钝</p>
 <p>样本容量越大，峰度和偏度越小，更接近正态分布，分布距离均值越近。</p>
-<script type="math/tex; mode=display">lim_{1\to+\infty}P(|\frac{1}{n}\sum_i^nX_i-\mu|<\epsilon)=1, i=1,...,n</script></div></article></div></main><footer><div class="paginator"><a href="/2019/06/20/secret/" class="prev">上一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'jhio';
-var disqus_identifier = '2019/05/12/2019-5-12-statistics-1/';
-var disqus_title = '统计学基础简略梳理';
-var disqus_url = 'http://neo42.github.io/2019/05/12/2019-5-12-statistics-1/';
-(function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();</script><script id="dsq-count-scr" src="//jhio.disqus.com/count.js" async></script><div class="copyright"><p>© 2019 <a href="http://neo42.github.io">Hao Jiang</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-139942221-1",'auto');ga('send','pageview');</script></body></html>
+<script type="math/tex; mode=display">lim_{1\to+\infty}P(|\frac{1}{n}\sum_i^nX_i-\mu|<\epsilon)=1, i=1,...,n</script></div></article></div></main><footer><div class="paginator"><a href="/2019/06/20/secret/" class="prev">上一篇</a></div>
+<div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+    clientID: '1b6fcf75f8ed505372e7',
+    clientSecret: 'f271c4407febb26749f61299fa2f60840f3d4349',
+    id: window.location.pathname,
+    repo: 'neo42.github.io',
+    owner: 'neo42',
+    admin: ['neo42'],
+    distractionFreeMode: false,
+    perPage:100,
+    language: 'zh-CN'
+})
+gitalk.render('gitalk-container')</script><div class="copyright"><p>© 2019 <a href="http://neo42.github.io">墨石</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-139942221-1",'auto');ga('send','pageview');</script></body></html>

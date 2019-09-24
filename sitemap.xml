@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://neo42.github.io/projects/index.html</loc>
+    <loc>http://neo42.github.io/2019/07/16/anxiety/</loc>
     
-    <lastmod>2019-09-09T18:35:23.279Z</lastmod>
+    <lastmod>2019-09-24T16:59:57.609Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://neo42.github.io/2019/09/09/2019-9-5-tap-into-redux/</loc>
+    <loc>http://neo42.github.io/2019/05/12/2019-5-12-statistics-1/</loc>
     
-    <lastmod>2019-09-09T15:46:16.497Z</lastmod>
+    <lastmod>2019-09-24T16:59:40.109Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://neo42.github.io/2019/09/18/2019-9-5-tap-into-redux/</loc>
+    
+    <lastmod>2019-09-17T17:36:59.375Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://neo42.github.io/2019/08/07/2019-8-7-deploy-create-react-app/</loc>
     
-    <lastmod>2019-09-09T14:42:25.402Z</lastmod>
+    <lastmod>2019-09-17T17:36:59.373Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://neo42.github.io/projects/index.html</loc>
+    
+    <lastmod>2019-09-11T12:48:15.094Z</lastmod>
     
   </url>
   
@@ -33,20 +47,6 @@
     <loc>http://neo42.github.io/2019/06/20/secret/</loc>
     
     <lastmod>2019-09-09T14:11:58.444Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://neo42.github.io/2019/07/16/anxiety/</loc>
-    
-    <lastmod>2019-09-09T14:11:58.443Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://neo42.github.io/2019/05/12/2019-5-12-statistics-1/</loc>
-    
-    <lastmod>2019-09-09T14:11:58.442Z</lastmod>
     
   </url>
   

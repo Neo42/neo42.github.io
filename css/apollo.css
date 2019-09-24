@@ -178,11 +178,11 @@ th {
 }
 ::-moz-selection {
   color: #ffffff;
-  background-color: #42b983;
+  background-color: #b2c0ca;
 }
 ::selection {
   color: #ffffff;
-  background-color: #42b983;
+  background-color: #b2c0ca;
 }
 html,
 body {
@@ -194,9 +194,10 @@ body {
   color: #34495e;
   font-size: 16px;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.7;
   background-color: #fff;
   font-family: 'Noto Serif SC', serif;
+  font-weight: 100;
 }
 ul.nav,
 ul.post-list {
@@ -216,7 +217,7 @@ a:active {
 a.nav-list-link.active,
 a.nav-list-link:hover,
 a.post-title-link:hover {
-  border-bottom: 2px solid #42b983;
+  border-bottom: 2px solid #b2c0ca;
 }
 hr {
   border: 0;
@@ -271,7 +272,7 @@ header .nav-list-item {
 }
 header .nav-list-item a {
   font-weight: bold;
-  font-size: 21px;
+  font-size: 19px;
   line-height: 1.4;
 }
 .home.post-list {
@@ -311,12 +312,12 @@ header .nav-list-item a {
 .archive .post-title-link {
   display: block;
   margin-left: 125px;
-  color: #42b983;
+  color: #96a1a1;
   word-break: break-all;
 }
 .archive .post-title-link:hover {
   border-bottom: 0;
-  color: #267b54;
+  color: rgb(120, 129, 134);
 }
 .archive .post-info {
   float: left;
@@ -359,8 +360,8 @@ header .nav-list-item a {
 .post-content h4:before,
 .post-content h5:before,
 .post-content h6:before {
-  content: '#';
-  color: #42b983;
+  content: '';
+  color: #b2c0ca;
   position: absolute;
   left: -0.7em;
   top: -4px;
@@ -382,13 +383,13 @@ header .nav-list-item a {
   font-size: 18px;
 }
 .post-content a {
-  color: #42b983;
+  color: #6d7d8d;
   word-break: break-all;
 }
 .post-content blockquote {
   margin: 2em 0;
   padding-left: 20px;
-  border-left: 4px solid #42b983;
+  border-left: 4px solid #b2c0ca;
 }
 .post-content img {
   display: block;
@@ -443,7 +444,7 @@ code,
 pre {
   font-size: 14px;
   background-color: #f8f8f8;
-  font-family: 'dank mono';
+  font-family: 'dank mono', 'Fira Code';
 }
 .highlight {
   position: relative;
@@ -617,7 +618,7 @@ pre .apache .tag,
 pre .apache .cbracket,
 pre .tex .command,
 pre .prompt {
-  color: #42b983;
+  color: #f57170;
 }
 pre .comment,
 pre .java .annotation,
@@ -652,14 +653,15 @@ pre .xml .cdata {
   margin: 0 4px;
   padding: 4px 12px;
   border-radius: 4px;
-  border-bottom: 4px solid #3aa373;
-  font-size: 14px;
+  border-bottom: 4px solid #92a3af;
+  font-size: 15px;
+  font-weight: lighter;
   color: #fff;
-  background-color: #4fc08d;
+  background-color: #b2c0ca;
 }
 .paginator .prev:hover,
 .paginator .next:hover {
-  background-color: #22bd77;
+  background-color: #a4b7c4;
 }
 .ds-thread,
 #disqus_thread {
@@ -732,18 +734,6 @@ footer .copyright a:hover {
   color: #888;
 }
 
-@font-face {
-  font-family: 'Source Han Sans';
-  src: url('../font/SourceHanSansSC-Normal.otf') format('otf');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Source Han Sans';
-  src: url('../font/SourceHanSansSC-Light.otf') format('otf');
-  font-weight: lighter;
-  font-style: lighter;
-}
 p {
   margin-left: 0;
   margin-right: 0;
@@ -755,10 +745,13 @@ p {
   margin-bottom: 1.55rem;
 }
 h4 {
-  margin-block-start: 0;
-  margin-block-end: 2rem;
+  margin-bottom: 1.55rem;
 }
 
 li {
   margin-bottom: calc(1.55rem / 2);
+}
+
+ol {
+  margin-bottom: 1.55rem;
 }
