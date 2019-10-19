@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://neo42.github.io/2019/08/07/2019-8-7-deploy-create-react-app/</loc>
+    
+    <lastmod>2019-10-19T08:30:23.599Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://neo42.github.io/projects/index.html</loc>
+    
+    <lastmod>2019-10-14T12:15:38.237Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://neo42.github.io/2019/10/14/2019-10-14-mdn-mutable/</loc>
+    
+    <lastmod>2019-10-14T12:15:38.235Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://neo42.github.io/2019/07/16/anxiety/</loc>
     
     <lastmod>2019-09-24T16:59:57.609Z</lastmod>
@@ -19,20 +40,6 @@
     <loc>http://neo42.github.io/2019/09/18/2019-9-5-tap-into-redux/</loc>
     
     <lastmod>2019-09-17T17:36:59.375Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://neo42.github.io/2019/08/07/2019-8-7-deploy-create-react-app/</loc>
-    
-    <lastmod>2019-09-17T17:36:59.373Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://neo42.github.io/projects/index.html</loc>
-    
-    <lastmod>2019-09-11T12:48:15.094Z</lastmod>
     
   </url>
   

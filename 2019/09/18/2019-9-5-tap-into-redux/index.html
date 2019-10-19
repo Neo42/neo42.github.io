@@ -74,7 +74,7 @@
 </ul>
 <h4 id="Dispatcher（分发器）"><a href="#Dispatcher（分发器）" class="headerlink" title="Dispatcher（分发器）"></a>Dispatcher（分发器）</h4><p>dispatcher.register: 参数是一个以 action 为参数的回调函数，这个函数用一个 switch 语句把所有可能用到的 store 中 callback 的调用规则按照不同的 action 类型组织起来。这个过程被称为 registration。可见 dispatcher 是任务分配的中心，你可以把它理解成十字路口的红绿灯。函数最后会调用 store 的 emitChange 方法，通知组件上的变化监听器，之后组件会做出相应的更新动作。dispatcher.dispatch 以 action 为参数，返回 store 中对应的 callback，之后直接可以拿到组建上使用。this.on(‘change’, ListStore.getAll()); 监听 dispatched action 引发的 store 的 emitChange 函数</p>
 <iframe src="https://codesandbox.io/embed/flux-example-kp01g?fontsize=14" title="flux-example" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-</div></article></div></main><footer><div class="paginator"><a href="/2019/08/16/2019-8-16-css-selector-cheat-sheet/" class="next">下一篇</a></div>
+</div></article></div></main><footer><div class="paginator"><a href="/2019/10/14/2019-10-14-mdn-mutable/" class="prev">上一篇</a><a href="/2019/08/16/2019-8-16-css-selector-cheat-sheet/" class="next">下一篇</a></div>
 <div id="gitalk-container"></div><script>var gitalk = new Gitalk({
     clientID: '1b6fcf75f8ed505372e7',
     clientSecret: 'f271c4407febb26749f61299fa2f60840f3d4349',

@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 【译】可变变量 - MDN Web 名词解释 · 墨石</title><meta name="description" content="【译】可变变量 - MDN Web 名词解释 - 墨石"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.geekzu.org/css?family=Noto+Sans+SC|Noto+Serif+SC&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code&amp;display=swap"><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script><link rel="search" type="application/opensearchdescription+xml" href="http://neo42.github.io/atom.xml" title="墨石"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">文章</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/projects/" target="_self" class="nav-list-link">项目</a></li><li class="nav-list-item"><a href="https://github.com/Neo42" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/Hao582307236" target="_blank" class="nav-list-link">TWITTER</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1>【译】可变变量 - MDN Web 名词解释</h1><div class="post-info">2019年10月14日</div><div class="post-content"><p>可变变量是一种可以被修改的变量。在 JavaScript 中，只有对象和数组是可变的，原始类型不是。</p>
+<p>（您可以使变量名称指向一个新值，但先前的值仍保留在内存中。因此需要进行垃圾回收。）</p>
+<p>可变对象是一旦创建即可修改其状态的对象。</p>
+<p>不可变对象是一旦创建便无法更改其状态的对象。</p>
+<p>字符串和数字是不可变的。我们用一个例子来理解这一点：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> immutableString =“ Hello”;</span><br><span class="line"></span><br><span class="line"><span class="comment">//我们上面的代码中创建了一个带有字符串值的新对象。</span></span><br><span class="line"></span><br><span class="line">immutableString = immutableString + <span class="string">"World"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//现在，我们将 “World” 附加到现有值上。</span></span><br></pre></td></tr></table></figure>
+<p>在将“ immutableString”附加到字符串值后，将发生以下事件：</p>
+<ol>
+<li>检索<code>immutableString</code>的现有值</li>
+<li>“World” 被附加到<code>immutableString</code>的现有值之后</li>
+<li>结果值被分配给新的内存块</li>
+<li><code>immutableString</code>对象指向新创建的内存空间</li>
+<li>以前创建的内存空间现在可以被垃圾回收了。</li>
+</ol>
+</div></article></div></main><footer><div class="paginator"><a href="/2019/09/18/2019-9-5-tap-into-redux/" class="next">下一篇</a></div>
+<div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+    clientID: '1b6fcf75f8ed505372e7',
+    clientSecret: 'f271c4407febb26749f61299fa2f60840f3d4349',
+    id: window.location.pathname,
+    repo: 'neo42.github.io',
+    owner: 'neo42',
+    admin: ['neo42'],
+    distractionFreeMode: false,
+    perPage:100,
+    language: 'zh-CN'
+})
+gitalk.render('gitalk-container')</script><div class="copyright"><p>© 2019 <a href="http://neo42.github.io">墨石</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-139942221-1",'auto');ga('send','pageview');</script></body></html>

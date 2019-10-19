@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://neo42.github.io/"/>
-  <updated>2019-09-17T17:36:59.375Z</updated>
+  <updated>2019-10-14T12:15:38.235Z</updated>
   <id>http://neo42.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【译】可变变量 - MDN Web 名词解释</title>
+    <link href="http://neo42.github.io/2019/10/14/2019-10-14-mdn-mutable/"/>
+    <id>http://neo42.github.io/2019/10/14/2019-10-14-mdn-mutable/</id>
+    <published>2019-10-13T16:00:00.000Z</published>
+    <updated>2019-10-14T12:15:38.235Z</updated>
+    
+    <content type="html"><![CDATA[<p>可变变量是一种可以被修改的变量。在 JavaScript 中，只有对象和数组是可变的，原始类型不是。</p><p>（您可以使变量名称指向一个新值，但先前的值仍保留在内存中。因此需要进行垃圾回收。）</p><p>可变对象是一旦创建即可修改其状态的对象。</p><p>不可变对象是一旦创建便无法更改其状态的对象。</p><p>字符串和数字是不可变的。我们用一个例子来理解这一点：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> immutableString =“ Hello”;</span><br><span class="line"></span><br><span class="line"><span class="comment">//我们上面的代码中创建了一个带有字符串值的新对象。</span></span><br><span class="line"></span><br><span class="line">immutableString = immutableString + <span class="string">"World"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//现在，我们将 “World” 附加到现有值上。</span></span><br></pre></td></tr></table></figure><p>在将“ immutableString”附加到字符串值后，将发生以下事件：</p><ol><li>检索<code>immutableString</code>的现有值</li><li>“World” 被附加到<code>immutableString</code>的现有值之后</li><li>结果值被分配给新的内存块</li><li><code>immutableString</code>对象指向新创建的内存空间</li><li>以前创建的内存空间现在可以被垃圾回收了。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;可变变量是一种可以被修改的变量。在 JavaScript 中，只有对象和数组是可变的，原始类型不是。&lt;/p&gt;
+&lt;p&gt;（您可以使变量名称指向一个新值，但先前的值仍保留在内存中。因此需要进行垃圾回收。）&lt;/p&gt;
+&lt;p&gt;可变对象是一旦创建即可修改其状态的对象。&lt;/p&gt;
+&lt;p&gt;不可
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>尝试理解Redux</title>
@@ -63,7 +88,7 @@
     <link href="http://neo42.github.io/2019/08/07/2019-8-7-deploy-create-react-app/"/>
     <id>http://neo42.github.io/2019/08/07/2019-8-7-deploy-create-react-app/</id>
     <published>2019-08-07T14:57:00.000Z</published>
-    <updated>2019-09-17T17:36:59.373Z</updated>
+    <updated>2019-10-19T08:30:23.599Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>学习 React 时可以用 Github Pages 部署自己的小项目，所以稍微总结一下，方便以后参考。</p></blockquote><a id="more"></a><h2 id="添加主页"><a href="#添加主页" class="headerlink" title="添加主页"></a>添加主页</h2><p>在 package.json 中添加<code>homepage</code>属性</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"name": "My-CRA",</span><br><span class="line">"homepage": "https://neo42.github.io/mycra",</span><br><span class="line">"version": "0.1.0",</span><br></pre></td></tr></table></figure><h2 id="安装-gh-pages"><a href="#安装-gh-pages" class="headerlink" title="安装 gh-pages"></a>安装 gh-pages</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i gh-pages</span><br></pre></td></tr></table></figure><h2 id="部署脚本"><a href="#部署脚本" class="headerlink" title="部署脚本"></a>部署脚本</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"scripts":&#123;</span><br><span class="line"> "predeploy": "npm run build",</span><br><span class="line"> "deploy": "gh-pages -d build",</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行部署命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run deploy</span><br></pre></td></tr></table></figure><h2 id="提交一个-commit-到-repo"><a href="#提交一个-commit-到-repo" class="headerlink" title="提交一个 commit 到 repo"></a>提交一个 commit 到 repo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add . &amp;&amp; git commit -m <span class="string">"Deploy to Github Pages"</span> &amp;&amp; git push <span class="comment"># mac</span></span><br><span class="line">git add . | git commit -m <span class="string">"Deploy to Github Pages"</span> | git push <span class="comment"># windows</span></span><br></pre></td></tr></table></figure><h2 id="设置-Github-Pages-的源"><a href="#设置-Github-Pages-的源" class="headerlink" title="设置 Github Pages 的源"></a>设置 Github Pages 的源</h2><p>把 <code>source</code> 设置为 <code>gh-pages branch</code></p><p><img src="https://reactgo.com/static/f1b680b3a2d43d59ea55047e89a39948/74755/react-ghpages-setup.png" alt></p>]]></content>
     
