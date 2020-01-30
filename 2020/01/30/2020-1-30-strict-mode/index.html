@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 严格模式的作用 · 墨石 🛠</title><meta name="description" content="严格模式的作用 - 墨石"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.geekzu.org/css?family=Noto+Sans+SC|Noto+Serif+SC&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code&amp;display=swap"><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script><link rel="search" type="application/opensearchdescription+xml" href="http://neo42.github.io/atom.xml" title="墨石 🛠"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">文章</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/projects/" target="_self" class="nav-list-link">项目</a></li><li class="nav-list-item"><a href="https://neo42.me/" target="_blank" class="nav-list-link">我</a></li><li class="nav-list-item"><a href="https://github.com/Neo42" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://twitter.com/Hao582307236" target="_blank" class="nav-list-link">TWITTER</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1>严格模式的作用</h1><div class="post-info">2020年1月30日</div><div class="post-content"><blockquote>
+<p>Strict mode finally debunked! Well, for me, at least.</p>
+</blockquote>
+<a id="more"></a>
+<p>严格模式可以“屏蔽”JavaScript 语言在使用中容易引起 bug 的功能，禁止出现不符合规范的代码，从而让 JS 的编译器更高效地运行。</p>
+<ul>
+<li>变量被声明时必须被赋值。</li>
+<li>函数参数必须具有唯一名称（否则会被视为语法错误）</li>
+<li>禁止使用 <code>with</code>。</li>
+<li>只读属性被赋值时会报错。</li>
+<li>像 <code>00840</code> 这样的八进制数字报语法错误。</li>
+<li>尝试 <code>delete</code> 不可删除的属性会引发语法错误。</li>
+<li><code>delete prop</code> 会报错， <code>delete global [prop]</code> 不会。</li>
+<li><code>eval</code> 不会将新变量引入其所在作用域。</li>
+<li><code>eval</code> 和参数不能被绑定或赋值。</li>
+<li><code>arguments</code> 不会跟踪方法参数的变更。</li>
+<li><code>arguments.callee</code> 引发 TypeError，不再支持。</li>
+<li><code>arguments.caller</code> 引发 TypeError，不再支持。</li>
+<li>方法被调用时作为<code>this</code>传入方法的上下文不会变成对象。</li>
+<li>JavaScript 堆栈不能通过使用 <code>fn.caller</code> 和 <code>fn.arguments</code> 访问 。</li>
+<li>保留字（例如 <code>protected</code>、<code>static</code>、<code>interface</code> 等）无法被赋值。</li>
+</ul>
+</div></article></div></main><footer><div class="paginator"><a href="/2019/10/14/2019-10-14-mdn-mutable/" class="next">下一篇</a></div>
+<div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+    clientID: '1b6fcf75f8ed505372e7',
+    clientSecret: 'f271c4407febb26749f61299fa2f60840f3d4349',
+    id: window.location.pathname,
+    repo: 'neo42.github.io',
+    owner: 'neo42',
+    admin: ['neo42'],
+    distractionFreeMode: false,
+    perPage:100,
+    language: 'zh-CN'
+})
+gitalk.render('gitalk-container')</script><div class="copyright"><p>© 2019 - 2020 <a href="http://neo42.github.io">墨石</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-139942221-1",'auto');ga('send','pageview');</script></body></html>
